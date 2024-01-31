@@ -17,11 +17,15 @@
       min-height: 37.5rem;
       inset-inline: 0;
     }
+    @include md-size {
+      &::before {
+        inset-inline: 1.5rem;
+      }
+    }
     @include lg-size {
       &::before {
         background-size: auto;
         background-position: left 41.6% top -30%;
-        inset-inline: 1.5rem;
       }
     }
 

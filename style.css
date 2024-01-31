@@ -101,18 +101,25 @@ body {
     padding-bottom: 20.06rem;
   }
 }
-.header__logo {
+.header__nav {
+  display: flex;
   margin-bottom: 4rem;
 }
 @media (min-width: 48rem) {
-  .header__logo {
+  .header__nav {
     margin-bottom: 5.94rem;
   }
 }
 @media (min-width: 90rem) {
-  .header__logo {
+  .header__nav {
     margin-bottom: 7.94rem;
   }
+}
+.header__nav .nav__logo {
+  transition: opacity 0.3s ease-in-out;
+}
+.header__nav .nav__logo:is(:hover, :focus) {
+  opacity: 0.5;
 }
 .header__title {
   font-size: 2.5rem;
@@ -174,11 +181,15 @@ body {
   min-height: 37.5rem;
   inset-inline: 0;
 }
+@media (min-width: 48rem) {
+  .main__product::before {
+    inset-inline: 1.5rem;
+  }
+}
 @media (min-width: 90rem) {
   .main__product::before {
     background-size: auto;
     background-position: left 41.6% top -30%;
-    inset-inline: 1.5rem;
   }
 }
 .main__product .product__image {
@@ -306,11 +317,10 @@ body {
     padding-top: 5.44rem;
   }
 }
-@media (min-width: 48rem) {
-  .footer .flex-group {
-    display: flex;
-    flex-direction: column;
-  }
+.footer .flex-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 @media (min-width: 90rem) {
   .footer .flex-group {
@@ -320,6 +330,11 @@ body {
 }
 .footer__logo {
   margin-bottom: 2rem;
+}
+@media (min-width: 90rem) {
+  .footer__logo {
+    margin-bottom: 0;
+  }
 }
 .footer__about {
   font-size: 1rem;
@@ -334,6 +349,9 @@ body {
 }
 .footer__about .contact__mail {
   font-weight: bold;
+}
+.footer__about .contact__mail:is(:hover, :focus, :active) {
+  text-decoration: underline;
 }
 .footer__social {
   display: flex;

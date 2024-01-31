@@ -23,13 +23,21 @@
     padding-bottom: 20.06rem;
   }
 
-  &__logo {
+  &__nav {
+    display: flex;
     margin-bottom: 4rem;
     @include md-size {
       margin-bottom: 5.94rem;
     }
     @include lg-size {
       margin-bottom: 7.94rem;
+    }
+
+    & .nav__logo {
+      transition: opacity 0.3s ease-in-out;
+      &:is(:hover, :focus) {
+        opacity: 0.5;
+      }
     }
   }
 
