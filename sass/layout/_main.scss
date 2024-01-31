@@ -1,0 +1,137 @@
+@use "../utils/" as *;
+
+.main {
+  &__product {
+    position: relative;
+    max-width: 70rem;
+    margin-inline: auto;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("./assets/images/bg-pattern-2.svg");
+      background-color: $color-primary;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 280px;
+      border-radius: 0.75rem;
+      min-height: 37.5rem;
+      inset-inline: 0;
+    }
+    @include lg-size {
+      &::before {
+        background-size: auto;
+        background-position: left 41.6% top -30%;
+        inset-inline: 1.5rem;
+      }
+    }
+
+    .product__image {
+      position: relative;
+      top: -6.12rem;
+      margin-inline: auto;
+      max-width: 210px;
+      @include md-size {
+        top: -8.63rem;
+        max-width: 270px;
+        margin-inline: 4rem auto;
+      }
+      @include lg-size {
+        top: -13.31rem;
+        max-width: 312px;
+        margin-inline: 6.6rem auto;
+      }
+    }
+
+    .product__card {
+      position: relative;
+      margin-top: -3.12rem;
+      background-color: $color-tertiary;
+      border-radius: 0.75rem;
+      padding: 3rem 2.28rem;
+      @include md-size {
+        padding: 3rem;
+        max-width: 25rem;
+        margin-top: -25.5rem;
+        margin-inline: auto 8rem;
+      }
+      @include lg-size {
+        padding: 3.62rem 3.69rem 3rem 3.38rem;
+        max-width: 28rem;
+        margin-top: -34rem;
+        margin-inline: auto 6.5rem;
+      }
+
+      .card__title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.75rem;
+        @include lg-size {
+          font-size: 2.5rem;
+          line-height: 3.25rem;
+          margin-bottom: 1.37rem;
+        }
+      }
+
+      .card__text {
+        margin-bottom: 2.25rem;
+        @include lg-size {
+          font-size: 1.25rem;
+          line-height: 2.125rem;
+          margin-bottom: 2.44rem;
+        }
+      }
+
+      .card__price {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        @include lg-size {
+          margin-bottom: 2.87rem;
+        }
+
+        .price__fee {
+          font-size: 4.0625rem;
+          font-weight: 700;
+          line-height: 3.25rem;
+        }
+
+        .price__recurrence {
+          font-size: 1.25rem;
+          line-height: 2rem;
+          letter-spacing: -0.0125rem;
+        }
+      }
+
+      .btn--apple {
+        background-color: $color-primary;
+        color: $color-secondary;
+        transition: background-color 0.3s ease-in-out;
+        &:is(:hover, :focus) {
+          background-color: #66e2dc;
+        }
+        &::before {
+          content: "";
+          background-image: url("../assets/images/icon-apple.svg");
+          width: 18px;
+          height: 20px;
+        }
+      }
+
+      .btn--android {
+        background-color: $color-secondary;
+        color: $color-primary;
+        transition: background-color 0.3s ease-in-out;
+        &:is(:hover, :focus) {
+          background-color: #ffb964;
+        }
+        &::before {
+          content: "";
+          background-image: url("../assets/images/icon-android.svg");
+          width: 17px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

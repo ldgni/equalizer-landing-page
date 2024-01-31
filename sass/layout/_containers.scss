@@ -1,0 +1,17 @@
+@use "../utils/" as *;
+
+.container {
+  padding-inline: 1.5rem;
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.container-footer {
+  padding-inline: 1.5rem;
+  max-width: 70rem;
+  margin-inline: auto;
+  @include md-size {
+    display: flex;
+    justify-content: space-between;
+  }
+}

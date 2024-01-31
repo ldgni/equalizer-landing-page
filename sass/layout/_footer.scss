@@ -1,0 +1,54 @@
+@use "../utils/" as *;
+
+.footer {
+  color: $color-primary;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  @include md-size {
+    padding-top: 5.44rem;
+  }
+
+  .flex-group {
+    @include md-size {
+      display: flex;
+      flex-direction: column;
+    }
+    @include lg-size {
+      flex-direction: row;
+      gap: 8.61rem;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+  }
+
+  &__about {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-bottom: 4rem;
+    @include md-size {
+      max-width: 23rem;
+      margin-bottom: 0;
+    }
+
+    .contact__mail {
+      font-weight: bold;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .social__link {
+      display: flex;
+      color: #191826;
+      transition: color 0.2s ease-in-out;
+      &:is(:hover, :focus) {
+        color: $color-tertiary;
+      }
+    }
+  }
+}

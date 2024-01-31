@@ -1,0 +1,71 @@
+@use "../utils/" as *;
+
+.header {
+  background-image: url("./assets/images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  color: $color-primary;
+  padding-top: 2.5rem;
+  padding-bottom: 10.37rem;
+  @include md-size {
+    background-image: url("./assets/images/bg-pattern-1.svg"),
+      url("./assets/images/bg-main-tablet.png");
+    background-position: right -35px top -35px, right -150px bottom -50px;
+    background-size: 265px, auto;
+    padding-top: 3.87rem;
+    padding-bottom: 15.56rem;
+  }
+  @include lg-size {
+    background-image: url("./assets/images/bg-pattern-1.svg"),
+      url("./assets/images/bg-main-desktop.png");
+    background-position: right top -35px, left -250px top -250px;
+    background-size: auto;
+    padding-bottom: 20.06rem;
+  }
+
+  &__logo {
+    margin-bottom: 4rem;
+    @include md-size {
+      margin-bottom: 5.94rem;
+    }
+    @include lg-size {
+      margin-bottom: 7.94rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: -0.02844rem;
+    margin-bottom: 1.25rem;
+    @include md-size {
+      font-size: 4rem;
+      line-height: 4rem;
+      letter-spacing: -0.04544rem;
+      max-width: 12ch;
+      margin-bottom: 1.75rem;
+    }
+    @include lg-size {
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+      letter-spacing: -0.0625rem;
+      max-width: 18ch;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    @include md-size {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      max-width: 32rem;
+    }
+    @include lg-size {
+      font-size: 1.25rem;
+      line-height: 2.125rem;
+      max-width: 52rem;
+    }
+  }
+}
