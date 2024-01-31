@@ -277,7 +277,7 @@ body {
 }
 .main__product .product__card .btn--apple::before {
   content: "";
-  background-image: url("../assets/images/icon-apple.svg");
+  background-image: url("./assets/images/icon-apple.svg");
   width: 18px;
   height: 20px;
 }
@@ -291,7 +291,7 @@ body {
 }
 .main__product .product__card .btn--android::before {
   content: "";
-  background-image: url("../assets/images/icon-android.svg");
+  background-image: url("./assets/images/icon-android.svg");
   width: 17px;
   height: 20px;
 }
