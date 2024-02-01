@@ -6,10 +6,7 @@
   margin-inline: auto;
 }
 
-.container-footer {
-  padding-inline: 1.5rem;
-  max-width: 70rem;
-  margin-inline: auto;
+.flex-container {
   @include md-size {
     display: flex;
     justify-content: space-between;

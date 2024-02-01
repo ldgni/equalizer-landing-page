@@ -64,13 +64,8 @@ body {
   margin-inline: auto;
 }
 
-.container-footer {
-  padding-inline: 1.5rem;
-  max-width: 70rem;
-  margin-inline: auto;
-}
 @media (min-width: 48rem) {
-  .container-footer {
+  .flex-container {
     display: flex;
     justify-content: space-between;
   }
@@ -103,12 +98,22 @@ body {
 }
 .header__logo {
   display: inline-block;
+  margin-bottom: 4rem;
+}
+@media (min-width: 48rem) {
+  .header__logo {
+    margin-bottom: 5.94rem;
+  }
+}
+@media (min-width: 90rem) {
+  .header__logo {
+    margin-bottom: 7.94rem;
+  }
 }
 .header__title {
   font-size: 2.5rem;
   line-height: 3rem;
   letter-spacing: -0.02844rem;
-  margin-top: 4rem;
   margin-bottom: 1.25rem;
 }
 @media (min-width: 48rem) {
@@ -117,7 +122,6 @@ body {
     line-height: 4rem;
     letter-spacing: -0.04544rem;
     max-width: 12ch;
-    margin-top: 5.94rem;
     margin-bottom: 1.75rem;
   }
 }
@@ -127,7 +131,6 @@ body {
     line-height: 5.5rem;
     letter-spacing: -0.0625rem;
     max-width: 18ch;
-    margin-top: 7.94rem;
     margin-bottom: 2.5rem;
   }
 }

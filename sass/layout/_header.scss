@@ -25,20 +25,25 @@
 
   &__logo {
     display: inline-block;
+    margin-bottom: 4rem;
+    @include md-size {
+      margin-bottom: 5.94rem;
+    }
+    @include lg-size {
+      margin-bottom: 7.94rem;
+    }
   }
 
   &__title {
     font-size: 2.5rem;
     line-height: 3rem;
     letter-spacing: -0.02844rem;
-    margin-top: 4rem;
     margin-bottom: 1.25rem;
     @include md-size {
       font-size: 4rem;
       line-height: 4rem;
       letter-spacing: -0.04544rem;
       max-width: 12ch;
-      margin-top: 5.94rem;
       margin-bottom: 1.75rem;
     }
     @include lg-size {
@@ -46,7 +51,6 @@
       line-height: 5.5rem;
       letter-spacing: -0.0625rem;
       max-width: 18ch;
-      margin-top: 7.94rem;
       margin-bottom: 2.5rem;
     }
   }
